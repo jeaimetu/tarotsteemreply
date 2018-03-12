@@ -220,7 +220,7 @@ function twoCardDraw()
 	console.log(tarot[1].longdesc());
 }
 
-module.export = function threeCardReading(argv)
+module.exports = function threeCardReading(argv)
 {
 	console.log(chalk.green('Drawing 3 cards:\n'));
 	reading(['Past', 'Present', 'Future']);
