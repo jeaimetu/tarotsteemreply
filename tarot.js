@@ -257,7 +257,7 @@ function reading(headings)
 	{
 		console.log(`${chalk.red(headings[i])}: ${cardname(reading[i].toString())}`);
 		console.log(wrap(reading[i].desc));
-		result += cardname(reading[i].toString();
+		result += `${chalk.red(headings[i])}: ${cardname(reading[i].toString())}`;
 		result += <BR>;
 		result += wrap(reading[i].desc);
 		result += <BR>;
