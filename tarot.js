@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+var methods = {
 const
     chalk    = require('chalk'),
 	shuffle  = require('knuth-shuffle').knuthShuffle,
@@ -328,4 +329,5 @@ var argv = require('yargs')
 	.version()
 	.argv;
 
+}
 module.exports = threeCardReading;
