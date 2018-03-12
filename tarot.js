@@ -223,8 +223,8 @@ function twoCardDraw()
 function threeCardReading(argv)
 {
 	console.log(chalk.green('Drawing 3 cards:\n'));
-	reading(['Past', 'Present', 'Future']);
-	return "test string";
+	var res = reading(['Past', 'Present', 'Future']);
+	return res;
 }
 
 function fourCardReading(argv)
