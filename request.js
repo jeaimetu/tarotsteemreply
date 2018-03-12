@@ -1,5 +1,6 @@
 var RequestClass = function() {
     // run code here, or...
+	node tarot three;
 }; 
 
 // ...add a method, which we do in this example:
