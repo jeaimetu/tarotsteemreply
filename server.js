@@ -1,10 +1,13 @@
 // Load the http module to create an http server.
 var http = require('http'); 
 
+var tarot = require('./tarot.js');
+
 // Create a function to handle every HTTP request
 function handler(req, res){
     res.setHeader('Content-Type', 'text/html');
     res.writeHead(200);
+	console.log("test",tarot.readingthreecards);
     res.end("<html><body><h1>Hello</h1></body></html>");
 };
 
