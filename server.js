@@ -15,6 +15,6 @@ var server = http.createServer(function(req, resp){
 	});
 });
 
-server.listen(process.env.port);
+server.listen(process.env.PORT);
 
-console.log('Listening at: localhost:8080');
+console.log('Listening at: localhost:8080',process.env.PORT);
