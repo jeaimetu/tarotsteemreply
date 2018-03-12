@@ -7,7 +7,7 @@ var tarot = require('./tarot.js');
 function handler(req, res){
     res.setHeader('Content-Type', 'text/html');
     res.writeHead(200);
-	console.log("test",tarot());
+	console.log("test",tarot.threeCardReading());
     res.end("<html><body><h1>Hello</h1></body></html>");
 };
 
