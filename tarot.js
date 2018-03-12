@@ -252,12 +252,12 @@ function reading(headings)
 	shuffle(tarot);
 	const reading = tarot.slice(0, headings.length);
 
-	var result;
+	var result="";
 	for (var i = 0; i < headings.length; i++)
 	{
 		console.log(`${chalk.red(headings[i])}: ${cardname(reading[i].toString())}`);
 		console.log(wrap(reading[i].desc));
-		result += wrap(reading[i].name);
+		result += `${chalk.red(headings[i])}: ${cardname(reading[i].toString())}`;
 		result += "<BR>";
 		result += wrap(reading[i].desc);
 		result += "<BR>";
