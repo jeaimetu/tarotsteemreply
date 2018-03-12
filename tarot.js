@@ -220,7 +220,7 @@ function twoCardDraw()
 	console.log(tarot[1].longdesc());
 }
 
-module.exports.threeCardReading = function threeCardReading(argv)
+function threeCardReading(argv)
 {
 	console.log(chalk.green('Drawing 3 cards:\n'));
 	reading(['Past', 'Present', 'Future']);
@@ -329,4 +329,4 @@ var argv = require('yargs')
 	.version()
 	.argv;
 
-
+module.exports.threeCardReading = threeCardReading;
