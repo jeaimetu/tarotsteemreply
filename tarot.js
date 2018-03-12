@@ -252,12 +252,16 @@ function reading(headings)
 	shuffle(tarot);
 	const reading = tarot.slice(0, headings.length);
 
+	var result;
 	for (var i = 0; i < headings.length; i++)
 	{
 		console.log(`${chalk.red(headings[i])}: ${cardname(reading[i].toString())}`);
 		console.log(wrap(reading[i].desc));
+		result += `${chalk.red(headings[i])}: ${cardname(reading[i].toString())}`;
+		result += wrap(reading[i].desc);
 	}
 	console.log();
+	return result;
 }
 
 var argv = require('yargs')
