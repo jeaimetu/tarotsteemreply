@@ -7,9 +7,9 @@ var tarot = require('./tarot.js');
 function handler(req, res){
     res.setHeader('Content-Type', 'text/html');
     res.writeHead(200);
-	console.log('test',tarot.threeCardReading());
+	//console.log('test',tarot.threeCardReading());
     //res.end("<html><body><h1>Hello</h1></body></html>");
-	res.end("<html><body><h1>",tarot.threeCardReading(),"</h1></body></html>");
+	res.end("<html><body><h1>"+tarot.threeCardReading()+"</h1></body></html>");
 };
 
 // Create a server that invokes the `handler` function upon receiving a request
