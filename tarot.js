@@ -155,8 +155,7 @@ var pentacles = [
 var tarot = [].concat(majors).concat(cups).concat(wands).concat(swords).concat(pentacles);
 const suits = { c: cups, s: swords, w: wands, p: pentacles,
 	cups: cups, swords: swords, wands: wands, pentacles: pentacles };
-var methods = {
-	
+
 function printAllCards()
 {
 	// console.log(util.format('%d cards found in the deck.', tarot.length));
@@ -330,5 +329,4 @@ var argv = require('yargs')
 	.version()
 	.argv;
 
-}
-module.exports = threeCardReading;
+
