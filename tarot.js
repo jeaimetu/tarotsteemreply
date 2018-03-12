@@ -328,4 +328,4 @@ var argv = require('yargs')
 	.version()
 	.argv;
 
-export.data = threeCardReading;
+module.exports = threeCardReading;
