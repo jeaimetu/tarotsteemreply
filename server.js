@@ -9,7 +9,11 @@ function handler(req, res){
     res.writeHead(200);
 	//console.log('test',tarot.threeCardReading());
     //res.end("<html><body><h1>Hello</h1></body></html>");
-	res.end("<html><body><h1>"+tarot.threeCardReading()+"</h1></body></html>");
+	var r1 = "<html><body><h1>";
+	var r2 = "</h1></body></html>";
+	var r3 = tarot.threeCardReading();
+	var answer = r1+r2+r3;
+	res.end(answer);
 };
 
 // Create a server that invokes the `handler` function upon receiving a request
