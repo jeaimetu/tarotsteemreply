@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var methods = {
+
 const
     chalk    = require('chalk'),
 	shuffle  = require('knuth-shuffle').knuthShuffle,
@@ -155,7 +155,8 @@ var pentacles = [
 var tarot = [].concat(majors).concat(cups).concat(wands).concat(swords).concat(pentacles);
 const suits = { c: cups, s: swords, w: wands, p: pentacles,
 	cups: cups, swords: swords, wands: wands, pentacles: pentacles };
-
+var methods = {
+	
 function printAllCards()
 {
 	// console.log(util.format('%d cards found in the deck.', tarot.length));
