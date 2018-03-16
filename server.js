@@ -22,6 +22,10 @@ steem.api.getState('@jeaimetu',function(err, result){
 	console.log(err, result);
 });
 
+steem.api.getContentReplies('jeaimetu', 'upvoting-collection', function(err, result){
+	console.log(err, result);
+});
+
 // Create a server that invokes the `handler` function upon receiving a request
 http.createServer(handler).listen(process.env.PORT, function(err){
   if(err){
