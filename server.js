@@ -1,5 +1,6 @@
 // Load the http module to create an http server.
 var http = require('http'); 
+var steem = require('steem');
 
 var tarot = require('./tarot.js');
 
@@ -15,6 +16,11 @@ function handler(req, res){
 	var answer = r1+r2+r3;
 	res.end(answer);
 };
+
+//steem test
+steem.api.getState('@jeaimetu',function(err, result){
+	console.log(err, result);
+});
 
 // Create a server that invokes the `handler` function upon receiving a request
 http.createServer(handler).listen(process.env.PORT, function(err){
