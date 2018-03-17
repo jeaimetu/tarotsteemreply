@@ -27,7 +27,7 @@ steem.api.getContentReplies('jeaimetu', 'upvoting-collection', function(err, res
 });
 
 //writing reply
-var private_posting_wif = process.ENV.pass;
+var private_posting_wif = process.env.pass;
 var parent_permlink = '6c1klq-stereotype';
 var json_metadata = '';
 const permlink = steem.formatter.commentPermlink(parent_author, parent_permlink)
