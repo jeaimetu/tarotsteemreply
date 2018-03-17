@@ -29,7 +29,7 @@ steem.api.getContentReplies('jeaimetu', 'upvoting-collection', function(err, res
 //writing reply
 var private_posting_wif = process.env.pass;
 var parent_author = 'jeaimetu';
-var parent_permlink = '6c1klq-stereotype';
+var parent_permlink = 're-jeaimetu-6c1klq-stereotype-20180317t185909244z';
 var json_metadata = '';
 const permlink = steem.formatter.commentPermlink(parent_author, parent_permlink)
 steem.broadcast.comment (
