@@ -26,6 +26,23 @@ steem.api.getContentReplies('jeaimetu', 'upvoting-collection', function(err, res
 	console.log(err, result);
 });
 
+//writing reply
+var private_posting_wif = process.ENV.pass;
+var parent_permlink = '6c1klq-stereotype';
+var json_metadata = '';
+const permlink = steem.formatter.commentPermlink(parent_author, parent_permlink)
+steem.broadcast.comment (
+    private_posting_wif,  // Steemit.com Wallet -> Permissions -> Show Private Key (for Posting)
+    'jeaimetu',        // empty for new blog post 
+    parent_permlink,      // main tag for new blog post
+    'jeaimetu',               // same user the private_posting_key is for
+    permlink,             // a slug (lowercase 'a'-'z', '0'-'9', and '-', min 1 character, max 255 characters)
+    '',                // human-readable title
+    'Posting test through api',                 // body of the post or comment
+    json_metadata         // arbitrary metadata
+)
+
+
 // Create a server that invokes the `handler` function upon receiving a request
 http.createServer(handler).listen(process.env.PORT, function(err){
   if(err){
