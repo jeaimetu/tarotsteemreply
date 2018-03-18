@@ -43,17 +43,26 @@ steem.broadcast.comment (
     'Posting test through api',                 // body of the post or comment
     json_metadata         // arbitrary metadata
 )
-*/
+
 console.log('getContet test');
 steem.api.getContent('jeaimetu','2-happenchange-investing-chapter-2',function(err, result){
 	console.log(err, result);
 	console.log(result.active_votes[0].voters);
 });
+*/
 
 console.log('getActiveVotes test');
+var res;
 steem.api.getActiveVotes('jeaimetu','2-happenchange-investing-chapter-2', function(err, result) {
-  console.log(err, result);
+  console.log(err, result);console.log('for each test');
+	res = result;
 });
+res.forEach((num, index) => {
+	console.log(num.voter);
+});
+
+
+
 
 
 // Create a server that invokes the `handler` function upon receiving a request
