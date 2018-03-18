@@ -66,6 +66,8 @@ steem.api.getActiveVotes('jeaimetu','2-happenchange-investing-chapter-2', functi
 		});
 	
 });
+
+console.log(res_formatted);
 /*
 
 */
