@@ -57,10 +57,11 @@ steem.api.getActiveVotes('jeaimetu','2-happenchange-investing-chapter-2', functi
   console.log(err, result);console.log('for each test');
 	res = result;
 });
+/*
 res.forEach((num, index) => {
 	console.log(num.voter);
 });
-
+*/
 
 
 
