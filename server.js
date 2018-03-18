@@ -64,10 +64,11 @@ steem.api.getActiveVotes('jeaimetu','2-happenchange-investing-chapter-2', functi
 		res_formatted += num.voter;
 		res_formatted += '\,';
 		});
+	console.log(res_formatted);
 	
 });
 
-console.log(res_formatted);
+
 /*
 
 */
