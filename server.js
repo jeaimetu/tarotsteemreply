@@ -54,7 +54,8 @@ steem.api.getContent('jeaimetu','2-happenchange-investing-chapter-2',function(er
 console.log('getActiveVotes test');
 var res;
 var res_formatted = '';;
-steem.api.getActiveVotes('jeaimetu','2-happenchange-investing-chapter-2', function(err, result) {
+var pLink = process.env.link;
+steem.api.getActiveVotes('jeaimetu',pLink, function(err, result) {
   console.log(err, result);
 	console.log('for each test');
 	res = result;
