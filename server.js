@@ -18,6 +18,7 @@ function handler(req, res){
 };
 
 //steem test
+/*
 steem.api.getState('@jeaimetu',function(err, result){
 	console.log(err, result);
 });
@@ -42,7 +43,9 @@ steem.broadcast.comment (
     'Posting test through api',                 // body of the post or comment
     json_metadata         // arbitrary metadata
 )
-
+*/
+var content = steem.api.getContent('jeaimetu','2-happenchange-investing-chapter-2');
+console.log(content);
 
 // Create a server that invokes the `handler` function upon receiving a request
 http.createServer(handler).listen(process.env.PORT, function(err){
