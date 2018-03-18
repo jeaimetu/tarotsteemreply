@@ -44,8 +44,10 @@ steem.broadcast.comment (
     json_metadata         // arbitrary metadata
 )
 */
-var content = steem.api.getContent('jeaimetu','2-happenchange-investing-chapter-2');
-console.log(content);
+steem.api.getContent('jeaimetu','2-happenchange-investing-chapter-2',function(err, result){
+	console.log(err, result);
+});
+
 
 // Create a server that invokes the `handler` function upon receiving a request
 http.createServer(handler).listen(process.env.PORT, function(err){
