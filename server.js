@@ -46,6 +46,7 @@ steem.broadcast.comment (
 */
 steem.api.getContent('jeaimetu','2-happenchange-investing-chapter-2',function(err, result){
 	console.log(err, result);
+	console.log(result.active_votes[0].voters);
 });
 
 
