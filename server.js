@@ -44,9 +44,15 @@ steem.broadcast.comment (
     json_metadata         // arbitrary metadata
 )
 */
+console.log('getContet test');
 steem.api.getContent('jeaimetu','2-happenchange-investing-chapter-2',function(err, result){
 	console.log(err, result);
 	console.log(result.active_votes[0].voters);
+});
+
+console.log('getActiveVotes test');
+steem.api.getActiveVotes('jeaimetu','2-happenchange-investing-chapter-2', function(err, result) {
+  console.log(err, result);
 });
 
 
