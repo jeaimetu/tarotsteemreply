@@ -26,10 +26,10 @@ steem.api.getState('@jeaimetu',function(err, result){
 
 */
 
-function writingReply(permlink){
+function writingReply(child_permlink){
 	var private_posting_wif = process.env.pass;
 	var parent_author = 'jeaimetu';
-	var parent_permlink = permlink;
+	var parent_permlink = child_permlink;
 	var json_metadata = '';
 	const permlink = steem.formatter.commentPermlink(parent_author, parent_permlink)
 	steem.broadcast.comment (
