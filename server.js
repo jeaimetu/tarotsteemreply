@@ -25,12 +25,18 @@ steem.api.getState('@jeaimetu',function(err, result){
 });
 
 */
+
+function writingReply(name){
+	console.log(name);
+}
 steem.api.getContentReplies('jeaimetu', '6c1klq-stereotype', function(err, result){
 	//console.log(err, result);
 	result.forEach((num, idx)=> {
 		console.log(num.body);
-		if(num.children == 0)
+		if(num.children == 0){
 			console.log('I will make reply for this');
+			wirtingReply(num.permlink);
+			}
 		});
 });
 
@@ -39,6 +45,7 @@ store.set('a','test string');
 console.log(store.get('a'));
 */
 /*
+
 
 //writing reply
 var private_posting_wif = process.env.pass;
