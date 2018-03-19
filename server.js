@@ -82,7 +82,7 @@ steem.api.getRepliesByLastUpdate('jeaimetu', '6c1klq-stereotype', 10, function(e
 */
 
 console.log('getDiscussionsByAuthorBeforeDate test');
-steem.api.getDiscussionsByAuthorBeforeDate('jeaimetu', '6c1klq-stereotype', "2018-03-18 11:55:18", 10, function(err, result) {
+steem.api.getDiscussionsByAuthorBeforeDate('jeaimetu', '6c1klq-stereotype', "2018-03-18T11:55:18", 10, function(err, result) {
   console.log(err, result);
 });
 
