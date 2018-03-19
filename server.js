@@ -69,7 +69,10 @@ steem.api.getActiveVotes('jeaimetu',pLink, function(err, result) {
 	
 });
 
-
+console.log('reply retrive test');
+steem.api.getRepliesByLastUpdate('jeaimetu', '6c1klq-stereotype', 10, function(err, result) {
+  console.log(err, result);
+});
 /*
 
 */
