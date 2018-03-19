@@ -35,7 +35,7 @@ steem.api.getContentReplies('jeaimetu', '6c1klq-stereotype', function(err, resul
 		console.log(num.body);
 		if(num.children == 0){
 			console.log('I will make reply for this');
-			wirtingReply(num.permlink);
+			wwitingReply(num.permlink);
 			}
 		});
 });
