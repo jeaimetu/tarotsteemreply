@@ -1,6 +1,7 @@
 // Load the http module to create an http server.
 var http = require('http'); 
 var steem = require('steem');
+var store = rquire('data-store')('my-app');
 
 var tarot = require('./tarot.js');
 
@@ -30,6 +31,10 @@ steem.api.getContentReplies('jeaimetu', '6c1klq-stereotype', function(err, resul
 		console.log(num.body);
 		});
 });
+
+/* data store test */
+store.set('a','test string');
+console.log(store.get('a');
 /*
 
 //writing reply
