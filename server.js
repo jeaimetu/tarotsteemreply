@@ -29,12 +29,15 @@ steem.api.getContentReplies('jeaimetu', '6c1klq-stereotype', function(err, resul
 	//console.log(err, result);
 	result.forEach((num, idx)=> {
 		console.log(num.body);
+		if(num.children == 0)
+			console.log('I will make reply for this');
 		});
 });
 
-/* data store test */
+/* data store test 
 store.set('a','test string');
 console.log(store.get('a'));
+*/
 /*
 
 //writing reply
