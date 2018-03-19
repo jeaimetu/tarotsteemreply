@@ -73,7 +73,7 @@ steem.api.getActiveVotes('jeaimetu',pLink, function(err, result) {
 */
 
 console.log('reply retrieve test');
-steem.api.getRepliesByLastUpdate('jeaimetu', 're-jeaimetu-6c1klq-stereotype-20180319t073641205z', 10, function(err, result) {
+steem.api.getRepliesByLastUpdate('jeaimetu', 're-jeaimetu-6c1klq-stereotype-20180317t185909244z', 10, function(err, result) {
   console.log(err, result);
 });
 
