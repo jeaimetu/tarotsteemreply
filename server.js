@@ -25,7 +25,10 @@ steem.api.getState('@jeaimetu',function(err, result){
 
 */
 steem.api.getContentReplies('jeaimetu', '6c1klq-stereotype', function(err, result){
-	console.log(err, result);
+	//console.log(err, result);
+	result.forEach(num, idx)=> {
+		console.log(num.body);
+		});
 });
 /*
 
