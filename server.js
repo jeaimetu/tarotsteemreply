@@ -26,8 +26,22 @@ steem.api.getState('@jeaimetu',function(err, result){
 
 */
 
-function writingReply(name){
-	console.log(name);
+function writingReply(permlink){
+	var private_posting_wif = process.env.pass;
+	var parent_author = 'jeaimetu';
+	var parent_permlink = permlink;
+	var json_metadata = '';
+	const permlink = steem.formatter.commentPermlink(parent_author, parent_permlink)
+	steem.broadcast.comment (
+    	private_posting_wif,  // Steemit.com Wallet -> Permissions -> Show Private Key (for Posting)
+    	'jeaimetu',        // empty for new blog post 
+    	parent_permlink,      // main tag for new blog post
+    	'jeaimetu',               // same user the private_posting_key is for
+    	permlink,             // a slug (lowercase 'a'-'z', '0'-'9', and '-', min 1 character, max 255 characters)
+    	'',                // human-readable title
+    	'Posting test through api',                 // body of the post or comment
+    	json_metadata         // arbitrary metadata
+)
 }
 steem.api.getContentReplies('jeaimetu', '6c1klq-stereotype', function(err, result){
 	//console.log(err, result);
