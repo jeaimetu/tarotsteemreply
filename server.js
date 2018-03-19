@@ -51,6 +51,7 @@ steem.api.getContent('jeaimetu','2-happenchange-investing-chapter-2',function(er
 });
 */
 
+/*
 console.log('getActiveVotes test');
 var res;
 var res_formatted = '';;
@@ -69,6 +70,7 @@ steem.api.getActiveVotes('jeaimetu',pLink, function(err, result) {
 	
 });
 
+*/
 /*
 console.log('reply retrive test');
 steem.api.getRepliesByLastUpdate('jeaimetu', '6c1klq-stereotype', 10, function(err, result) {
@@ -80,7 +82,7 @@ steem.api.getRepliesByLastUpdate('jeaimetu', '6c1klq-stereotype', 10, function(e
 */
 
 console.log('getDiscussionsByAuthorBeforeDate test');
-steem.api.getDiscussionsByAuthorBeforeDate('jeaimetu', '6c1klq-stereotype', "2018-03-20'T'11:55:10", 10, function(err, result) {
+steem.api.getDiscussionsByAuthorBeforeDate('jeaimetu', '6c1klq-stereotype', '2018-03-10', 10, function(err, result) {
   console.log(err, result);
 });
 
