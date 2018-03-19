@@ -34,7 +34,7 @@ steem.api.getContentReplies('jeaimetu', '6c1klq-stereotype', function(err, resul
 
 /* data store test */
 store.set('a','test string');
-console.log(store.get('a');
+console.log(store.get('a'));
 /*
 
 //writing reply
