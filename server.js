@@ -1,7 +1,7 @@
 // Load the http module to create an http server.
 var http = require('http'); 
 var steem = require('steem');
-var store = rquire('data-store')('my-app');
+var store = require('data-store')('my-app');
 
 var tarot = require('./tarot.js');
 
