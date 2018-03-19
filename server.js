@@ -23,9 +23,11 @@ steem.api.getState('@jeaimetu',function(err, result){
 	console.log(err, result);
 });
 
-steem.api.getContentReplies('jeaimetu', 'upvoting-collection', function(err, result){
+*/
+steem.api.getContentReplies('jeaimetu', '6c1klq-stereotype', function(err, result){
 	console.log(err, result);
 });
+/*
 
 //writing reply
 var private_posting_wif = process.env.pass;
@@ -71,12 +73,13 @@ steem.api.getActiveVotes('jeaimetu',pLink, function(err, result) {
 });
 
 */
-
+/* this get all replies, so does not work for me */
+/*
 console.log('reply retrieve test');
 steem.api.getRepliesByLastUpdate('jeaimetu', 're-jeaimetu-6c1klq-stereotype-20180317t185909244z', 10, function(err, result) {
   console.log(err, result);
 });
-
+*/
 /*
 
 */
