@@ -2,6 +2,7 @@
 var http = require('http'); 
 var steem = require('steem');
 var store = require('data-store')('my-app');
+var sleep = require('sleep');
 
 var tarot = require('./tarot.js');
 
@@ -69,6 +70,7 @@ function checkReplies() {
 					console.log('I will make reply for this');
 					console.log('call writingReply for ', idx);
 					writingReply(num.permlink);
+					sleep.sleep(21);
 				}
 			}
 		});
@@ -78,8 +80,8 @@ function checkReplies() {
 // according to steemit github
 // https://github.com/steemit/steem/blob/master/libraries/protocol/include/steemit/protocol/config.hpp
 // #define STEEMIT_MIN_REPLY_INTERVAL              (fc::seconds(20)) // 20 seconds
-// So I safely add 30ms interval
-setInterval(checkReplies, 30000);
+// So I safely add 60secs interval consider delay time.
+setInterval(checkReplies, 60000);
 
 /* data store test 
 store.set('a','test string');
