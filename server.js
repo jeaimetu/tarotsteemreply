@@ -36,7 +36,7 @@ function writingReply(child_permlink,pAuthor){
 	var json_metadata = '';
 	//check author have . then remove that
 	var dotCheck = ".";
-	if(num.body.indexOf(dotCheck) != -1){
+	if(pAuthor.indexOf(dotCheck) != -1){
 		//replace .
 		var parent_author = pAuthor.replace(".","D");
 	}
