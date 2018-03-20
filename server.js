@@ -38,10 +38,9 @@ function writingReply(child_permlink,pAuthor){
 	var dotCheck = ".";
 	if(num.body.indexOf(dotCheck) != -1){
 		//replace .
-		var parent_permlink = child_permlink.replace(".","D");
-	}else{
-		var parent_permlink = child_permlink;
+		var parent_author = pAuthor.replace(".","D");
 	}
+
 	const permlink = steem.formatter.commentPermlink(parent_author, parent_permlink)
 	//const permlink = steem.formatter.commentPermlink('jeaimetu', parent_permlink)
 	
