@@ -26,13 +26,16 @@ steem.api.getState('@jeaimetu',function(err, result){
 
 */
 
+//After writing, this needs cool down time to create the block chain
 function writingReply(child_permlink){
 	var private_posting_wif = process.env.pass;
 	var parent_author = 'jeaimetu';
 	var parent_permlink = child_permlink;
 	var json_metadata = '';
 	const permlink = steem.formatter.commentPermlink(parent_author, parent_permlink)
-	var content = tarot.randomCard();
+	var content = '당신의 타로점 결과는..<BR>';
+	content += tarot.randomCard();
+	content += '<BR> 좋은 하루 되세요. Teddy의 타로점을 이용해 주셔서 감사합니다.';
 	steem.broadcast.comment (
     	private_posting_wif,  // Steemit.com Wallet -> Permissions -> Show Private Key (for Posting)
     	'jeaimetu',        // empty for new blog post 
