@@ -50,14 +50,20 @@ function checkReplies() {
 		result.forEach((num, idx)=> {
 			console.log(num.body);
 			if(num.children == 0){
-				console.log('I will make reply for this');
-				writingReply(num.permlink);
+				var string = "tarot";
+				if(num.body.indexOf(string) !== -1)
+					console.log('I will make reply for this');
+					writingReply(num.permlink);
 				}
 			});
 	});
 }
 
-setInterval(checkReplies, 20000);
+// according to steemit github
+// https://github.com/steemit/steem/blob/master/libraries/protocol/include/steemit/protocol/config.hpp
+// #define STEEMIT_MIN_REPLY_INTERVAL              (fc::seconds(20)) // 20 seconds
+// So I safely add 30ms interval
+setInterval(checkReplies, 30000);
 
 /* data store test 
 store.set('a','test string');
