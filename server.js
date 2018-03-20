@@ -34,8 +34,16 @@ function writingReply(child_permlink,pAuthor){
 	//var parent_author = '';
 	var parent_permlink = child_permlink;
 	var json_metadata = '';
-	//const permlink = steem.formatter.commentPermlink(parent_author, parent_permlink)
-	const permlink = steem.formatter.commentPermlink('jeaimetu', parent_permlink)
+	//check author have . then remove that
+	var dotCheck = ".";
+	if(num.body.indexOf(dotCheck) != -1){
+		//replace .
+		var parent_permlink = child_permlink.replace(".","D");
+	}else{
+		var parent_permlink = child_permlink;
+	}
+	const permlink = steem.formatter.commentPermlink(parent_author, parent_permlink)
+	//const permlink = steem.formatter.commentPermlink('jeaimetu', parent_permlink)
 	
 	var content = '<table><tr><td> . ';
 	content += '</td><td><p><strong>안녕하세요. 타로점 결과 입니다. 조만간 한글 버전도 나오니, 많이 사용해 주세요.</strong></p><hr><p>';
