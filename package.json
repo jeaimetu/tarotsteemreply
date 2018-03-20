@@ -16,7 +16,7 @@
     "wordwrap": "~1.0.0",
     "yargs": "~7.0.2",
     "steem": "~0.7.1",
-    "sleep": "~5.5.1"
+    "sleep": "~5.1.1"
   },
   "devDependencies": {},
   "homepage": "https://github.com/ceejbot/tarot-tool#readme",
