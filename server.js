@@ -34,7 +34,7 @@ function writingReply(child_permlink){
 	var json_metadata = '';
 	const permlink = steem.formatter.commentPermlink(parent_author, parent_permlink)
 	
-	var content = '<table><tr><td> . ;
+	var content = '<table><tr><td> . ';
 	content += '</td><td><p><strong>Hi, this is your requested tarot</strong></p><hr><p>';
 	content += tarot.randomCard();
 	content += '</td></tr></table>';
