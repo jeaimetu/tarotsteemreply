@@ -33,9 +33,9 @@ function writingReply(child_permlink){
 	var parent_permlink = child_permlink;
 	var json_metadata = '';
 	const permlink = steem.formatter.commentPermlink(parent_author, parent_permlink)
-	var content = '당신의 타로점 결과는..<BR>';
+	var content = "<table><tr><td><img src = https://cdn.pixabay.com/photo/2017/10/09/13/24/priest-2833384_960_720.jpg height="200" witdh = "100"></td>
+<td><p><strong>Hi, this is your requested tarot</strong></p><hr><p>";
 	content += tarot.randomCard();
-	content += '<BR> 좋은 하루 되세요. Teddy의 타로점을 이용해 주셔서 감사합니다.';
 	steem.broadcast.comment (
     	private_posting_wif,  // Steemit.com Wallet -> Permissions -> Show Private Key (for Posting)
     	'jeaimetu',        // empty for new blog post 
