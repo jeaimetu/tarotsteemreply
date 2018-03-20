@@ -64,13 +64,13 @@ var Swords = new Suit('Swords');
 var Pentacles = new Suit('Pentacles');
 
 var majors = [
-	new Card('The Fool', null, true, 0, 'Journey\'s beginning. Initial possibilities. Childlike questioning. Unawareness. The Querent.'),
+	new Card('The Fool', null, true, 0, "Journey's beginning. Initial possibilities. Childlike questioning. Unawareness. The Querent."),
 	new Card('The Magician', null, true, 1, 'First steps: Command over the elements, arcane power and its expression. A catalyst. A charming and charismatic man.'),
 	new Card('The High Priestess', null, true, 2, 'Knowledge: Instinctive, supernatural knowledge, secrets of the arcane. Secrets revealed. A woman of mysterious knowledge.'),
 	new Card('The Empress', null, true, 3, 'The matriarch, the essence of motherhood. Fertility and life. Nuturing. Fertility.', 'Venus'),
 	new Card('The Emperor', null, true, 4, 'The patriarch, the essence of fatherhood. Command and domination. Responsibility. Determination.', 'Aries'),
 	new Card('The Hierophant', null, true, 5, 'The maker and follower of rules. Structured teaching. The established order. Wisdom.', 'Taurus'),
-	new Card('The Lovers', null, true, 6, 'Spiritual love: Finding one\'s soul mate. Choice. Blessed union.', 'Gemini'),
+	new Card('The Lovers', null, true, 6, "Spiritual love: Finding one's soul mate. Choice. Blessed union.", 'Gemini'),
 	new Card('The Chariot', null, true, 7, 'Direction: Hard-won victory, surrounded by its spoils and reminders of how it was achieved.', 'Cancer'),
 	new Card('Strength', null, true, 8, 'Courage, inner strength, self-command. Loyalty and generosity.', 'Leo'),
 	new Card('The Hermit', null, true, 9, 'Search. Introspection, solitude, withdrawal & taking stock.', 'Virgo'),
@@ -85,7 +85,7 @@ var majors = [
 	new Card('The Moon', null, true, 18, 'Fantasy: Visions & dreams & unconscious knowledge. Water, night, inaction.', 'Pisces'),
 	new Card('The Sun', null, true, 19, 'Truth: Glory, triumph, radiance, confidence in power. Fire, day, action.', 'Leo'),
 	new Card('Judgement', null, true, 20, 'Conclusions: Decisions made, new directions embraced. Leave the dead past behind, and embrace rebirth.'),
-	new Card('The World', null, true, 21, 'Completion: I\'m going to show you the World! Successful completion, especially of the long-term; travel in a grand sense. Journey\'s end.'),
+	new Card('The World', null, true, 21, 'Completion: I am going to show you the World! Successful completion, especially of the long-term; travel in a grand sense. Journey\'s end.'),
 ];
 var cups = [
 	new Card('', Cups, false, 1, 'Emotion. The birth of new emotion and magic. A wellspring. The essence of water. West. Autumn. Gabriel.'),
@@ -129,7 +129,7 @@ var swords = [
 	new Card('', Swords, false, 7, 'Thief. Set a thief to catch a thief; cleverness is required. Not showing one\'s true face. Deceit.'),
 	new Card('', Swords, false, 8, 'Immobility. Trapped, afraid to move, though motion is required.'),
 	new Card('', Swords, false, 9, 'Nightmares. Oppression, fear, stress. But is it all in your head?'),
-	new Card('', Swords, false, 10, 'Defeat. It\'s as bad as you think. The worst.'),
+	new Card('', Swords, false, 10, 'Defeat. It is as bad as you think. The worst.'),
 	new Card('', Swords, false, 11, 'Apprentice. A message about problems, solved or posed. Rumors? A young and brash warrior, perhaps overconfident.'),
 	new Card('', Swords, false, 12, 'Journeyman. Travel by air. The argumentative knight, interested in information & discussion.'),
 	new Card('', Swords, false, 13, 'Encyclopedic knowledge. Problem-solving at the expense of the personal. A stylish but possibly cold woman. The development of story or information.'),
