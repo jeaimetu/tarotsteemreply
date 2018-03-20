@@ -32,7 +32,7 @@ function writingReply(child_permlink){
 	var parent_permlink = child_permlink;
 	var json_metadata = '';
 	const permlink = steem.formatter.commentPermlink(parent_author, parent_permlink)
-	
+	var content = tarot.randomCard();
 	steem.broadcast.comment (
     	private_posting_wif,  // Steemit.com Wallet -> Permissions -> Show Private Key (for Posting)
     	'jeaimetu',        // empty for new blog post 
@@ -40,7 +40,7 @@ function writingReply(child_permlink){
     	'jeaimetu',               // same user the private_posting_key is for
     	permlink,             // a slug (lowercase 'a'-'z', '0'-'9', and '-', min 1 character, max 255 characters)
     	'',                // human-readable title
-    	'Posting test through api',                 // body of the post or comment
+    	content,                 // body of the post or comment
     	json_metadata,          // arbitrary metadata
 		function (err, result){
 			if(err)
