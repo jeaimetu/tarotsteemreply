@@ -39,7 +39,7 @@ function writingReply(child_permlink,pAuthor){
 	var dotCheck = ".";
 	if(pAuthor.indexOf(dotCheck) != -1){
 		//replace .
-		var parent_author_permlink = pAuthor.replace(".","D");
+		var parent_author_permlink = pAuthor.replace(".","dot");
 	}
 
 	const permlink = steem.formatter.commentPermlink(parent_author_permlink, parent_permlink)
