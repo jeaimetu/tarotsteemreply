@@ -61,8 +61,8 @@ function checkReplies() {
 		result.forEach((num, idx)=> {
 			console.log(num.body);
 			if(num.children == 0){
-				var string = "";
-				if(num.body.indexOf(string) !== -1){
+				var string = "타로";
+				if(num.body.indexOf(string) != -1){
 					console.log('I will make reply for this');
 					console.log('call writingReply for ', idx);
 					writingReply(num.permlink);
