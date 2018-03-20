@@ -30,7 +30,8 @@ steem.api.getState('@jeaimetu',function(err, result){
 //After writing, this needs cool down time to create the block chain
 function writingReply(child_permlink,pAuthor){
 	var private_posting_wif = process.env.pass;
-	var parent_author = pAuthor;
+	//var parent_author = pAuthor;
+	var parent_author = '';
 	var parent_permlink = child_permlink;
 	var json_metadata = '';
 	const permlink = steem.formatter.commentPermlink(parent_author, parent_permlink)
