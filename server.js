@@ -40,7 +40,13 @@ function writingReply(child_permlink){
     	permlink,             // a slug (lowercase 'a'-'z', '0'-'9', and '-', min 1 character, max 255 characters)
     	'',                // human-readable title
     	'Posting test through api',                 // body of the post or comment
-    	json_metadata         // arbitrary metadata
+    	json_metadata,          // arbitrary metadata
+		function (err, result){
+			if(err)
+				console.log('Failure', err);
+			else
+				console.log('Success');
+			
 )
 }
 
