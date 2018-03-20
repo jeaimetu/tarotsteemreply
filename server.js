@@ -60,7 +60,7 @@ function writingReply(child_permlink){
 }
 
 function checkReplies() {
-	steem.api.getContentReplies('jeaimetu', '6c1klq-stereotype', function(err, result){
+	steem.api.getContentReplies('jeaimetu', process.env.link, function(err, result){
 		//console.log(err, result);
 		result.forEach((num, idx)=> {
 			//sleep.sleep(21); //do not work what I intended
