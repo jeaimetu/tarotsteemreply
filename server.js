@@ -63,7 +63,7 @@ function checkReplies() {
 	steem.api.getContentReplies('jeaimetu', '6c1klq-stereotype', function(err, result){
 		//console.log(err, result);
 		result.forEach((num, idx)=> {
-			sleep.sleep(21);
+			//sleep.sleep(21); //do not work what I intended
 			console.log(num.body);
 			if(num.children == 0){
 				var string = "타로";
