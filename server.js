@@ -35,13 +35,14 @@ function writingReply(child_permlink,pAuthor){
 	var parent_permlink = child_permlink;
 	var json_metadata = '';
 	//check author have . then remove that
+	var parent_author_permlink = pAuthor;
 	var dotCheck = ".";
 	if(pAuthor.indexOf(dotCheck) != -1){
 		//replace .
-		var parent_author = pAuthor.replace(".","D");
+		var parent_author_permlink = pAuthor.replace(".","D");
 	}
 
-	const permlink = steem.formatter.commentPermlink(parent_author, parent_permlink)
+	const permlink = steem.formatter.commentPermlink(parent_author_permlink, parent_permlink)
 	//const permlink = steem.formatter.commentPermlink('jeaimetu', parent_permlink)
 	
 	var content = '<table><tr><td> . ';
