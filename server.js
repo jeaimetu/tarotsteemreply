@@ -64,6 +64,7 @@ function checkReplies() {
 				var string = "";
 				if(num.body.indexOf(string) !== -1){
 					console.log('I will make reply for this');
+					console.log('call writingReply for ', idx);
 					writingReply(num.permlink);
 				}
 			}
