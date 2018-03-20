@@ -35,8 +35,9 @@ function writingReply(child_permlink){
 	const permlink = steem.formatter.commentPermlink(parent_author, parent_permlink)
 	
 	var content = '<table><tr><td><img src = https://cdn.pixabay.com/photo/2017/10/09/13/24/priest-2833384_960_720.jpg';
-	content += ' height="200" witdh = "100"></td><td><p><strong>Hi, this is your requested tarot</strong></p><hr><p></td></tr></table>';
+	content += ' height="15%" witdh = "15%"></td><td><p><strong>Hi, this is your requested tarot</strong></p><hr><p>';
 	content += tarot.randomCard();
+	content += '</td></tr></table>';
 	
 	steem.broadcast.comment (
     	private_posting_wif,  // Steemit.com Wallet -> Permissions -> Show Private Key (for Posting)
