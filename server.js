@@ -63,6 +63,7 @@ function checkReplies() {
 	steem.api.getContentReplies('jeaimetu', '6c1klq-stereotype', function(err, result){
 		//console.log(err, result);
 		result.forEach((num, idx)=> {
+			sleep.sleep(21);
 			console.log(num.body);
 			if(num.children == 0){
 				var string = "타로";
@@ -70,7 +71,6 @@ function checkReplies() {
 					console.log('I will make reply for this');
 					console.log('call writingReply for ', idx);
 					writingReply(num.permlink);
-					sleep.sleep(21);
 				}
 			}
 		});
