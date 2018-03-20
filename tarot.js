@@ -211,6 +211,7 @@ function randomCard()
 {
 	shuffle(tarot);
 	console.log(tarot[0].longdesc());
+	return tarot[0].longdesc();
 }
 
 function twoCardDraw()
@@ -339,3 +340,4 @@ var argv = require('yargs')
 	.argv;
 
 module.exports.threeCardReading = threeCardReading;
+module.exports.randomCard = randomCard;
