@@ -96,13 +96,12 @@ setInterval(checkReplies, 25000);
 steem.api.getAccountHistory('jeaimetu', -1,9999, function(err, result) {
   //console.log(err, result);
 	const WALLET_FILTER = 'transfer'
-	result.forEach((num, idx)=> {
-		//console.log(num.op);
-		//console.log(num);
-		//console.log(num[1].op[0], num[1].op[1]);
-		let transfers = result.filter( tx => tx[1].op[0] === WALLET_FILTER )
-        console.log(transfers)
+	let transfers = result.filter( tx => tx[1].op[0] === WALLET_FILTER )
+    //console.log(transfers)
+	transfers.forEach((tx) => {
+		console.log(tx[1].op[0], tx[1].op[1].from, tx[1].op[1].amount)
 	});
+	
 });
 
 /* data store test 
