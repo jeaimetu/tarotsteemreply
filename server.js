@@ -93,7 +93,7 @@ function checkReplies() {
 // So I safely add 60secs interval consider delay time.
 setInterval(checkReplies, 25000);
 
-steem.api.getAccountHistory('jeaimetu', 1,100, function(err, result) {
+steem.api.getAccountHistory('jeaimetu', -1,100, function(err, result) {
   console.log(err, result);
 });
 
