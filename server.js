@@ -101,7 +101,7 @@ steem.api.getAccountHistory('jeaimetu', -1,9999, function(err, result) {
 	let transfers = result.filter( tx => tx[1].op[0] === WALLET_FILTER )
     //console.log(transfers)
 	
-	trans.forEach((tx) => {
+	transers.forEach((tx) => {
 		if(tx[1].op[1].from == "upbit-exchange" || tx[1].op[1].from == "korbit2")
 			console.log(tx[1].op[0], tx[1].op[1].from, tx[1].op[1].amount)
 		amount += tx[1].op[1].amount;
