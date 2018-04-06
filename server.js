@@ -97,8 +97,8 @@ steem.api.getAccountHistory('jeaimetu', -1,100, function(err, result) {
   //console.log(err, result);
 	result.forEach((num, idx)=> {
 		//console.log(num.op);
-		console.log(num);
-		console.log(num.trx_id);
+		//console.log(num);
+		console.log(num[1].op[0], num[1].op[1]);
 	});
 });
 
