@@ -93,16 +93,23 @@ function checkReplies() {
 // So I safely add 60secs interval consider delay time.
 setInterval(checkReplies, 25000);
 
+var amount = 0;
+
 steem.api.getAccountHistory('jeaimetu', -1,9999, function(err, result) {
   //console.log(err, result);
 	const WALLET_FILTER = 'transfer'
 	let transfers = result.filter( tx => tx[1].op[0] === WALLET_FILTER )
     //console.log(transfers)
-	transfers.forEach((tx) => {
-		console.log(tx[1].op[0], tx[1].op[1].from, tx[1].op[1].amount)
+	
+	trans.forEach((tx) => {
+		if(tx[1].op[1].from == "upbit-exchange" || tx[1].op[1].from == "korbit2")
+			console.log(tx[1].op[0], tx[1].op[1].from, tx[1].op[1].amount)
+		amount += tx[1].op[1].amount;
 	});
 	
 });
+
+console.log("total amount from exchange", amount);
 
 /* data store test 
 store.set('a','test string');
