@@ -94,7 +94,10 @@ function checkReplies() {
 setInterval(checkReplies, 25000);
 
 
-
+/* ToDo
+1. get more than 9999 records
+2. extract number from "x.xxx STEEM" and convert it to number
+*/
 steem.api.getAccountHistory('jeaimetu', -1,9999, function(err, result) {
   //console.log(err, result);
 	const WALLET_FILTER = 'transfer'
