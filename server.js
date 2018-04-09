@@ -125,9 +125,12 @@ steem.api.getAccountHistory('jeaimetu', -1,9999, function(err, result) {
 	
 });
 
-cloudinary.v2.api.resources(function(error, result){console.log(result)});
-
-cloudinary.v2.api.resources({type: 'upload'}, function(error, result){});
+//did not return all images. This may depends on the folder
+//cloudinary.v2.api.resources(function(error, result){console.log(result)});
+//did not return nothing
+//cloudinary.v2.api.resources({type: 'upload'}, function(error, result){});
+var searchResult = Cloudinary::Search.expression('Fool').with_field('context').with_field('tags').max_results(10).execute
+console.log(searchResilt);
 
 /* data store test 
 store.set('a','test string');
