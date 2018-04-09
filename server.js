@@ -54,7 +54,8 @@ function writingReply(child_permlink,pAuthor){
 	//const permlink = steem.formatter.commentPermlink('jeaimetu', parent_permlink)
 	
 	var content = '<table><tr><td> . ';
-	content += cloudinary.image("00_Fool.jpg", {alt : "Test"})
+	//content += cloudinary.image("00_Fool.jpg", {alt : "Test"})
+	content += cloudinary.image("Fool.jpg", {alt : "Test"})
 	content += '</td><td><p><strong>안녕하세요. 타로점 결과 입니다. 조만간 한글 버전도 나오니, 많이 사용해 주세요.</strong></p><hr><p>';
 	content += tarot.randomCard();
 	content += '</td></tr></table>';
