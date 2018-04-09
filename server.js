@@ -55,6 +55,7 @@ function writingReply(child_permlink,pAuthor){
 	var tarotResult = tarot.randomCard();
 	var i = tarotResult.indexOf("##: ");
 	var a = tarotResult.substr(i+5,tarotResult.length-1);
+	a..replace(/\s/g,'');
 	console.log("image name :", a,":");
 	var b = tarotResult.substr(0,i-1);
 	
