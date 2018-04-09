@@ -127,6 +127,8 @@ steem.api.getAccountHistory('jeaimetu', -1,9999, function(err, result) {
 
 cloudinary.v2.api.resources(function(error, result){console.log(result)});
 
+cloudinary.v2.api.resources({type: 'upload'}, function(error, result){});
+
 /* data store test 
 store.set('a','test string');
 console.log(store.get('a'));
