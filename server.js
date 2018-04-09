@@ -54,7 +54,8 @@ function writingReply(child_permlink,pAuthor){
 	//const permlink = steem.formatter.commentPermlink('jeaimetu', parent_permlink)
 	var tarotResult = tarot.randomCard();
 	var i = tarotResult.indexOf("##: ");
-	var a = tarotResult.substr(i,tarotResult.length);
+	var a = tarotResult.substr(i+4,tarotResult.length);
+	console.log("image name : ", a);
 	var b = tarotResult.substr(0,i-1);
 	
 	var content = '<table><tr><td> . ';
