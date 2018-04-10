@@ -59,7 +59,7 @@ function writingReply(child_permlink,pAuthor){
 	console.log("image name :", a,":");
 	var b = tarotResult.substr(0,i-1);
 	
-	var content = '<table><tr><td> . ';
+	var content = '<table><tr><td>  ';
 	//content += cloudinary.image("00_Fool.jpg", {alt : "Test"})
 	console.log(cloudinary.image(a, {alt : "Test"}));
 	//content += cloudinary.image(a, {alt : "Test"}, {width : 50})
@@ -67,6 +67,7 @@ function writingReply(child_permlink,pAuthor){
 	content += '</td><td><p><strong>안녕하세요. 타로점 결과 입니다. 조만간 한글 버전도 나오니, 많이 사용해 주세요.</strong></p><hr><p>';
 	
 	//content += tarot.randomCard();
+	b.replace(///g,"/\n");
 	content += b;
 	content += '</td></tr></table>';
 	
