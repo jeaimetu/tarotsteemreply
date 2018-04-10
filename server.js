@@ -55,12 +55,13 @@ function writingReply(child_permlink,pAuthor){
 	var tarotResult = tarot.randomCard();
 	var i = tarotResult.indexOf("##: ");
 	var a = tarotResult.substr(i+5,tarotResult.length-1);
-	a.replace(/\s/g,'');
+	a.replace(" "/g,'');
 	console.log("image name :", a,":");
 	var b = tarotResult.substr(0,i-1);
 	
 	var content = '<table><tr><td> . ';
 	//content += cloudinary.image("00_Fool.jpg", {alt : "Test"})
+	console.log(cloudinary.image(a, {alt : "Test"}));
 	content += cloudinary.image(a, {alt : "Test"})
 	content += '</td><td><p><strong>안녕하세요. 타로점 결과 입니다. 조만간 한글 버전도 나오니, 많이 사용해 주세요.</strong></p><hr><p>';
 	
