@@ -66,9 +66,9 @@ var Pentacles = new Suit('Pentacles');
 
 var majors = [
 	new Card('The Fool', null, true, 0, "Journey's beginning. Initial possibilities. Childlike questioning. Unawareness. The Querent.","00_Fool.jpg"),
-	new Card('The Magician', null, true, 1, 'First steps: Command over the elements, arcane power and its expression. A catalyst. A charming and charismatic man.',"01_Magician.jpg"),
-	new Card('The High Priestess', null, true, 2, 'Knowledge: Instinctive, supernatural knowledge, secrets of the arcane. Secrets revealed. A woman of mysterious knowledge.',"02_High_Priestess.jpg"),
-	new Card('The Empress', null, true, 3, 'The matriarch, the essence of motherhood. Fertility and life. Nuturing. Fertility.', 'Venus',"02_High_Priestess.jpg"),
+	new Card('The Magician', null, true, 1, "First steps: Command over the elements, arcane power and its expression. A catalyst. A charming and charismatic man.","01_Magician.jpg"),
+	new Card('The High Priestess', null, true, 2, "Knowledge: Instinctive, supernatural knowledge, secrets of the arcane. Secrets revealed. A woman of mysterious knowledge.","02_High_Priestess.jpg"),
+	new Card('The Empress', null, true, 3, "The matriarch, the essence of motherhood. Fertility and life. Nuturing. Fertility.", 'Venus',"02_High_Priestess.jpg"),
 	new Card('The Emperor', null, true, 4, 'The patriarch, the essence of fatherhood. Command and domination. Responsibility. Determination.', 'Aries',"02_High_Priestess.jpg"),
 	new Card('The Hierophant', null, true, 5, 'The maker and follower of rules. Structured teaching. The established order. Wisdom.', 'Taurus',"02_High_Priestess.jpg"),
 	new Card('The Lovers', null, true, 6, "Spiritual love: Finding one's soul mate. Choice. Blessed union.", 'Gemini'),
