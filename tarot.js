@@ -34,7 +34,7 @@ Card.prototype.longdesc = function longdesc()
 {
 	console.log();
 	var result = `${cardname(this.toString())}:`;
-	if (this.zodiac) result += ` ${chalk.green(this.zodiac)}`;	
+	if (this.zodiac) result += ` zodiac : ${chalk.green(this.zodiac)} :`;	
 	result += wrap(`${this.desc}`);	
 	if (this.element) result += `    ##: ${chalk.green(this.element)}`;
 
