@@ -67,7 +67,7 @@ function writingReply(child_permlink,pAuthor){
 	content += '</td><td><p><strong>안녕하세요. 타로점 결과 입니다. 조만간 한글 버전도 나오니, 많이 사용해 주세요.</strong></p><hr><p>';
 	
 	//content += tarot.randomCard();
-	b.replace(///g,"/\n");
+	b.replace("/","/\n");
 	content += b;
 	content += '</td></tr></table>';
 	
