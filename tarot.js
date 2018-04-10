@@ -19,7 +19,7 @@ function Suit(name)
 
 Suit.prototype.name = null;
 
-function Card(name, suit, ismajor, pips, desc, zodiac)
+function Card(name, suit, ismajor, pips, desc, zodiac, img)
 {
     this.name = name;
 	this.suit = suit;
@@ -27,17 +27,16 @@ function Card(name, suit, ismajor, pips, desc, zodiac)
 	this.pips = parseInt(pips, 10);
 	this.desc = desc;
 	this.zodiac = zodiac;
-	this.element = null;
+	this.element = img;
 }
 
 Card.prototype.longdesc = function longdesc()
 {
 	console.log();
 	var result = `${cardname(this.toString())}:`;
-	
-	if (this.element) result += `    Element: ${chalk.green(this.element)}`;
-	result += wrap(`${this.desc}`);
-	if (this.zodiac) result += `    ##: ${chalk.green(this.zodiac)}`;
+	if (this.zodiac) result += ` ${chalk.green(this.zodiac)}`;	
+	result += wrap(`${this.desc}`);	
+	if (this.element) result += `    ##: ${chalk.green(this.element)}`;
 
     return result;
 };
@@ -65,92 +64,92 @@ var Swords = new Suit('Swords');
 var Pentacles = new Suit('Pentacles');
 
 var majors = [
-	new Card('The Fool', null, true, 0, "Journey's beginning. Initial possibilities. Childlike questioning. Unawareness. The Querent.","00_Fool.jpg"),
-	new Card('The Magician', null, true, 1, "First steps: Command over the elements, arcane power and its expression. A catalyst. A charming and charismatic man.","01_Magician.jpg"),
-	new Card('The High Priestess', null, true, 2, "Knowledge: Instinctive, supernatural knowledge, secrets of the arcane. Secrets revealed. A woman of mysterious knowledge.","02_High_Priestess.jpg"),
+	new Card('The Fool', null, true, 0, "Journey's beginning. Initial possibilities. Childlike questioning. Unawareness. The Querent.",".","00_Fool.jpg"),
+	new Card('The Magician', null, true, 1, "First steps: Command over the elements, arcane power and its expression. A catalyst. A charming and charismatic man.",".","01_Magician.jpg"),
+	new Card('The High Priestess', null, true, 2, "Knowledge: Instinctive, supernatural knowledge, secrets of the arcane. Secrets revealed. A woman of mysterious knowledge.",".","02_High_Priestess.jpg"),
 	new Card('The Empress', null, true, 3, "The matriarch, the essence of motherhood. Fertility and life. Nuturing. Fertility.", 'Venus',"02_High_Priestess.jpg"),
 	new Card('The Emperor', null, true, 4, 'The patriarch, the essence of fatherhood. Command and domination. Responsibility. Determination.', 'Aries',"02_High_Priestess.jpg"),
 	new Card('The Hierophant', null, true, 5, 'The maker and follower of rules. Structured teaching. The established order. Wisdom.', 'Taurus',"02_High_Priestess.jpg"),
-	new Card('The Lovers', null, true, 6, "Spiritual love: Finding one's soul mate. Choice. Blessed union.", 'Gemini'),
+	new Card('The Lovers', null, true, 6, "Spiritual love: Finding one's soul mate. Choice. Blessed union.", 'Gemini',"02_High_Priestess.jpg"),
 	new Card('The Chariot', null, true, 7, 'Direction: Hard-won victory, surrounded by its spoils and reminders of how it was achieved.', 'Cancer',"02_High_Priestess.jpg"),
 	new Card('Strength', null, true, 8, 'Courage, inner strength, self-command. Loyalty and generosity.', 'Leo',"02_High_Priestess.jpg"),
 	new Card('The Hermit', null, true, 9, 'Search. Introspection, solitude, withdrawal & taking stock.', 'Virgo',"02_High_Priestess.jpg"),
-	new Card('The Wheel', null, true, 10, 'Luck, whether good or bad. Karmic payback. Time.',"02_High_Priestess.jpg"),
+	new Card('The Wheel', null, true, 10, 'Luck, whether good or bad. Karmic payback. Time.',".","02_High_Priestess.jpg"),
 	new Card('Justice', null, true, 11, 'Equity: Legal matters, laws (of physics or of men). Balance & imbalance.', 'Libra',"02_High_Priestess.jpg"),
 	new Card('The Hanged Man', null, true, 12, 'Trial: Odin nailed to the tree. Meditation, reflection, prophecy, self-sacrifice. Risk, change in perception, certainties that shatter, a desire to change.', 'Neptune',"02_High_Priestess.jpg"),
 	new Card('Death', null, true, 13, 'Transformation: Ends and beginnings, loss and renewal. Change. Sex & death.', 'Scorpio',"02_High_Priestess.jpg"),
 	new Card('Temperance', null, true, 14, 'Alchemy: Moderation, the blending of elements. The balancing of energies.', 'Sagittarius',"02_High_Priestess.jpg"),
-	new Card('The Devil', null, true, 15, 'Passion: Enslavement, materialism, addiction, wild behavior. The extremes. Desires of the senses, sexuality. Pan.',"02_High_Priestess.jpg"),
-	new Card('The Tower', null, true, 16, 'War: the destruction of the establishment with a single flash of insight. Tearing down. A rude awakening. Secrets.',"02_High_Priestess.jpg"),
-	new Card('The Star', null, true, 17, 'Hope: Spiritual insight, healing, water to quench thirst.', 'Aquarius',"02_High_Priestess.jpg"),
+	new Card('The Devil', null, true, 15, 'Passion: Enslavement, materialism, addiction, wild behavior. The extremes. Desires of the senses, sexuality. Pan.',".","02_High_Priestess.jpg"),
+	new Card('The Tower', null, true, 16, 'War: the destruction of the establishment with a single flash of insight. Tearing down. A rude awakening. Secrets.',".","02_High_Priestess.jpg"),
+	new Card('The Star', null, true, 17, 'Hope: Spiritual insight, healing, water to quench thirst.', 'Aquarius',".","02_High_Priestess.jpg"),
 	new Card('The Moon', null, true, 18, 'Fantasy: Visions & dreams & unconscious knowledge. Water, night, inaction.', 'Pisces',"02_High_Priestess.jpg"),
 	new Card('The Sun', null, true, 19, 'Truth: Glory, triumph, radiance, confidence in power. Fire, day, action.', 'Leo',"02_High_Priestess.jpg"),
-	new Card('Judgement', null, true, 20, 'Conclusions: Decisions made, new directions embraced. Leave the dead past behind, and embrace rebirth.',"02_High_Priestess.jpg"),
-	new Card('The World', null, true, 21, 'Completion: I am going to show you the World! Successful completion, especially of the long-term; travel in a grand sense. Journey\'s end.',"02_High_Priestess.jpg"),
+	new Card('Judgement', null, true, 20, 'Conclusions: Decisions made, new directions embraced. Leave the dead past behind, and embrace rebirth.',".","02_High_Priestess.jpg"),
+	new Card('The World', null, true, 21, 'Completion: I am going to show you the World! Successful completion, especially of the long-term; travel in a grand sense. Journey\'s end.',".","02_High_Priestess.jpg"),
 ];
 var cups = [
-	new Card('', Cups, false, 1, 'Emotion. The birth of new emotion and magic. A wellspring. The essence of water. West. Autumn. Gabriel.',"02_High_Priestess.jpg"),
-	new Card('', Cups, false, 2, 'Partnership. The recognition of friendship or love. Emotion in balance.',"02_High_Priestess.jpg"),
-	new Card('', Cups, false, 3, 'Celebration. Love and joy.',"02_High_Priestess.jpg"),
-	new Card('', Cups, false, 4, 'Depression, boredom, stagnation.',"02_High_Priestess.jpg"),
-	new Card('', Cups, false, 5, 'Obsession with past losses. Target fixation.',"02_High_Priestess.jpg"),
-	new Card('', Cups, false, 6, 'A moment of perfect balance; nostalgia.',"02_High_Priestess.jpg"),
-	new Card('', Cups, false, 7, 'Fantasy. Inability to decide. Illusions, deceptions.',"02_High_Priestess.jpg"),
-	new Card('', Cups, false, 8, 'Application. Shedding the familiar in favor of the new.',"02_High_Priestess.jpg"),
-	new Card('', Cups, false, 9, 'Satisfaction. Wishes fulfilled, appetites fed.',"02_High_Priestess.jpg"),
-	new Card('', Cups, false, 10, 'Harmony. Love, joy, and friendship, all stable and family-style.',"02_High_Priestess.jpg"),
-	new Card('', Cups, false, 11, 'Apprentice. A message of love or family.',"02_High_Priestess.jpg"),
-	new Card('', Cups, false, 12, 'Journeyman. Travel by water. The emo!knight, dreamy and moody, prone to writing poetry. (Songfic?)',"02_High_Priestess.jpg"),
-	new Card('', Cups, false, 13, 'An intuitive, emotionally-savvy woman, a family nurturer. A healer or counselor. The development of relationships.',"02_High_Priestess.jpg"),
-	new Card('', Cups, false, 14, 'The master of water, emotion, & magic. This man can be somewhat old-fashioned, but a gentle patriarch. ',"02_High_Priestess.jpg"),
+	new Card('', Cups, false, 1, 'Emotion. The birth of new emotion and magic. A wellspring. The essence of water. West. Autumn. Gabriel.',".","02_High_Priestess.jpg"),
+	new Card('', Cups, false, 2, 'Partnership. The recognition of friendship or love. Emotion in balance.',".","02_High_Priestess.jpg"),
+	new Card('', Cups, false, 3, 'Celebration. Love and joy.',".","02_High_Priestess.jpg"),
+	new Card('', Cups, false, 4, 'Depression, boredom, stagnation.',".","02_High_Priestess.jpg"),
+	new Card('', Cups, false, 5, 'Obsession with past losses. Target fixation.',".","02_High_Priestess.jpg"),
+	new Card('', Cups, false, 6, 'A moment of perfect balance; nostalgia.',".","02_High_Priestess.jpg"),
+	new Card('', Cups, false, 7, 'Fantasy. Inability to decide. Illusions, deceptions.',".","02_High_Priestess.jpg"),
+	new Card('', Cups, false, 8, 'Application. Shedding the familiar in favor of the new.',".","02_High_Priestess.jpg"),
+	new Card('', Cups, false, 9, 'Satisfaction. Wishes fulfilled, appetites fed.',".","02_High_Priestess.jpg"),
+	new Card('', Cups, false, 10, 'Harmony. Love, joy, and friendship, all stable and family-style.',".","02_High_Priestess.jpg"),
+	new Card('', Cups, false, 11, 'Apprentice. A message of love or family.',".","02_High_Priestess.jpg"),
+	new Card('', Cups, false, 12, 'Journeyman. Travel by water. The emo!knight, dreamy and moody, prone to writing poetry. (Songfic?)',".","02_High_Priestess.jpg"),
+	new Card('', Cups, false, 13, 'An intuitive, emotionally-savvy woman, a family nurturer. A healer or counselor. The development of relationships.',".","02_High_Priestess.jpg"),
+	new Card('', Cups, false, 14, 'The master of water, emotion, & magic. This man can be somewhat old-fashioned, but a gentle patriarch. ',".","02_High_Priestess.jpg"),
 ];
 var wands = [
-	new Card('', Wands, false, 1, 'Energy. The birth of raw energy; creation. The essence of fire. South. Summer. Michael.',"02_High_Priestess.jpg"),
-	new Card('', Wands, false, 2, 'Ambition. Choice. Power in balance.',"02_High_Priestess.jpg"),
-	new Card('', Wands, false, 3, 'Waiting. Progress and potential. Action has been taken.',"02_High_Priestess.jpg"),
-	new Card('', Wands, false, 4, 'Ceremony. Foundations laid, perhaps marriage or contracted partnership.',"02_High_Priestess.jpg"),
-	new Card('', Wands, false, 5, 'Struggle. Conflict & power struggles, perhaps as preparation. Training.',"02_High_Priestess.jpg"),
-	new Card('', Wands, false, 6, 'Victory, and its celebration among allies.',"02_High_Priestess.jpg"),
-	new Card('', Wands, false, 7, 'Besieged. On the defensive.',"02_High_Priestess.jpg"),
-	new Card('', Wands, false, 8, 'Energy. Swift movement, haste. Motion & change.',"02_High_Priestess.jpg"),
-	new Card('', Wands, false, 9, 'Roots. Success as a step away; the strength to continue the battle; a strong position.',"02_High_Priestess.jpg"),
-	new Card('', Wands, false, 10, 'Oppression. A heavy burden. Exaggeration.',"02_High_Priestess.jpg"),
-	new Card('', Wands, false, 11, 'Apprentice. A message about motion. A charismatic, active kid, a natural leader.',"02_High_Priestess.jpg"),
-	new Card('', Wands, false, 12, 'Journeyman. Exciting travel. Someone who tilts at windmills, makes grand gestures, and is somewhat unreliable.',"02_High_Priestess.jpg"),
-	new Card('', Wands, false, 13, 'A creative, energetic, charismatic, in-charge woman. The development of leadership.',"02_High_Priestess.jpg"),
-	new Card('', Wands, false, 14, 'The master of fire, creation, sexual energy. A dynamic and charismatic man, who can lead armies or mobs.',"02_High_Priestess.jpg"),
+	new Card('', Wands, false, 1, 'Energy. The birth of raw energy; creation. The essence of fire. South. Summer. Michael.',".","02_High_Priestess.jpg"),
+	new Card('', Wands, false, 2, 'Ambition. Choice. Power in balance.',".","02_High_Priestess.jpg"),
+	new Card('', Wands, false, 3, 'Waiting. Progress and potential. Action has been taken.',".","02_High_Priestess.jpg"),
+	new Card('', Wands, false, 4, 'Ceremony. Foundations laid, perhaps marriage or contracted partnership.',".","02_High_Priestess.jpg"),
+	new Card('', Wands, false, 5, 'Struggle. Conflict & power struggles, perhaps as preparation. Training.',".","02_High_Priestess.jpg"),
+	new Card('', Wands, false, 6, 'Victory, and its celebration among allies.',".","02_High_Priestess.jpg"),
+	new Card('', Wands, false, 7, 'Besieged. On the defensive.',".","02_High_Priestess.jpg"),
+	new Card('', Wands, false, 8, 'Energy. Swift movement, haste. Motion & change.',".","02_High_Priestess.jpg"),
+	new Card('', Wands, false, 9, 'Roots. Success as a step away; the strength to continue the battle; a strong position.',".","02_High_Priestess.jpg"),
+	new Card('', Wands, false, 10, 'Oppression. A heavy burden. Exaggeration.',".","02_High_Priestess.jpg"),
+	new Card('', Wands, false, 11, 'Apprentice. A message about motion. A charismatic, active kid, a natural leader.',".","02_High_Priestess.jpg"),
+	new Card('', Wands, false, 12, 'Journeyman. Exciting travel. Someone who tilts at windmills, makes grand gestures, and is somewhat unreliable.',".","02_High_Priestess.jpg"),
+	new Card('', Wands, false, 13, 'A creative, energetic, charismatic, in-charge woman. The development of leadership.',".","02_High_Priestess.jpg"),
+	new Card('', Wands, false, 14, 'The master of fire, creation, sexual energy. A dynamic and charismatic man, who can lead armies or mobs.',".","02_High_Priestess.jpg"),
 ];
 var swords = [
-	new Card('', Swords, false, 1, 'Mind. The mind awakening, pure intellect. The essence of air. East. Spring. Raphael.',"02_High_Priestess.jpg"),
-	new Card('', Swords, false, 2, 'Compromise. Temporary balance and compromise, perhaps even because of blockage.',"02_High_Priestess.jpg"),
-	new Card('', Swords, false, 3, 'Heartbreak, betrayal, deceit.',"02_High_Priestess.jpg"),
-	new Card('', Swords, false, 4, 'Stillness. Meditation and rest. A retreat to recover and heal. Standing back for thought.',"02_High_Priestess.jpg"),
-	new Card('', Swords, false, 5, 'Losing the argument, perhaps to a cheater.',"02_High_Priestess.jpg"),
-	new Card('', Swords, false, 6, 'Retreat and recovery. Release of tension, calm after upset; solutions for mental problems. Melancholy.',"02_High_Priestess.jpg"),
-	new Card('', Swords, false, 7, "Thief. Set a thief to catch a thief, cleverness is required. Not showing one's true face. Deceit.","02_High_Priestess.jpg"),
-	new Card('', Swords, false, 8, 'Immobility. Trapped, afraid to move, though motion is required.',"02_High_Priestess.jpg"),
-	new Card('', Swords, false, 9, 'Nightmares. Oppression, fear, stress. But is it all in your head?',"02_High_Priestess.jpg"),
-	new Card('', Swords, false, 10, 'Defeat. It is as bad as you think. The worst.',"02_High_Priestess.jpg"),
-	new Card('', Swords, false, 11, 'Apprentice. A message about problems, solved or posed. Rumors? A young and brash warrior, perhaps overconfident.',"02_High_Priestess.jpg"),
-	new Card('', Swords, false, 12, 'Journeyman. Travel by air. The argumentative knight, interested in information & discussion.',"02_High_Priestess.jpg"),
-	new Card('', Swords, false, 13, 'Encyclopedic knowledge. Problem-solving at the expense of the personal. A stylish but possibly cold woman. The development of story or information.',"02_High_Priestess.jpg"),
-	new Card('', Swords, false, 14, 'The master of air, mind, and knowledge. A fair man, an idealistic man, a man with high standards.',"02_High_Priestess.jpg"),
+	new Card('', Swords, false, 1, 'Mind. The mind awakening, pure intellect. The essence of air. East. Spring. Raphael.',".","02_High_Priestess.jpg"),
+	new Card('', Swords, false, 2, 'Compromise. Temporary balance and compromise, perhaps even because of blockage.',".","02_High_Priestess.jpg"),
+	new Card('', Swords, false, 3, 'Heartbreak, betrayal, deceit.',".","02_High_Priestess.jpg"),
+	new Card('', Swords, false, 4, 'Stillness. Meditation and rest. A retreat to recover and heal. Standing back for thought.',".","02_High_Priestess.jpg"),
+	new Card('', Swords, false, 5, 'Losing the argument, perhaps to a cheater.',".","02_High_Priestess.jpg"),
+	new Card('', Swords, false, 6, 'Retreat and recovery. Release of tension, calm after upset; solutions for mental problems. Melancholy.',".","02_High_Priestess.jpg"),
+	new Card('', Swords, false, 7, "Thief. Set a thief to catch a thief, cleverness is required. Not showing one's true face. Deceit.",".","02_High_Priestess.jpg"),
+	new Card('', Swords, false, 8, 'Immobility. Trapped, afraid to move, though motion is required.',".","02_High_Priestess.jpg"),
+	new Card('', Swords, false, 9, 'Nightmares. Oppression, fear, stress. But is it all in your head?',".","02_High_Priestess.jpg"),
+	new Card('', Swords, false, 10, 'Defeat. It is as bad as you think. The worst.',".","02_High_Priestess.jpg"),
+	new Card('', Swords, false, 11, 'Apprentice. A message about problems, solved or posed. Rumors? A young and brash warrior, perhaps overconfident.',".","02_High_Priestess.jpg"),
+	new Card('', Swords, false, 12, 'Journeyman. Travel by air. The argumentative knight, interested in information & discussion.',".","02_High_Priestess.jpg"),
+	new Card('', Swords, false, 13, 'Encyclopedic knowledge. Problem-solving at the expense of the personal. A stylish but possibly cold woman. The development of story or information.',".","02_High_Priestess.jpg"),
+	new Card('', Swords, false, 14, 'The master of air, mind, and knowledge. A fair man, an idealistic man, a man with high standards.',".","02_High_Priestess.jpg"),
 ];
 var pentacles = [
-	new Card('', Pentacles, false, 1, 'Matter. A new task; new projects; new goals. The essence of earth. North. Winter. Uriel.',"02_High_Priestess.jpg"),
-	new Card('', Pentacles, false, 2, 'Balance of material tasks and jobs. The juggler.',"02_High_Priestess.jpg"),
-	new Card('', Pentacles, false, 3, 'Craftsmanship. Construction. Hard work, with its results.',"02_High_Priestess.jpg"),
-	new Card('', Pentacles, false, 4, 'The miser. A refusal to share. Fear.',"02_High_Priestess.jpg"),
-	new Card('', Pentacles, false, 5, 'Exposure, vulnerability. Material loss. Poverty. Perhaps someone to share the hardships with.',"02_High_Priestess.jpg"),
-	new Card('', Pentacles, false, 6, 'Generosity. Impulsiveness, altruism.',"02_High_Priestess.jpg"),
-	new Card('', Pentacles, false, 7, 'Rest. Patiently waiting for work to come to fruition. Nothing to do but wait.',"02_High_Priestess.jpg"),
-	new Card('', Pentacles, false, 8, 'Apprenticeship. Dedication. The training montage.',"02_High_Priestess.jpg"),
-	new Card('', Pentacles, false, 9, 'Wealth. Physical luxury. Rewards for hard work. A lush vacation.',"02_High_Priestess.jpg"),
-	new Card('', Pentacles, false, 10, 'Prosperity rooted in tradition. The fulfilment of physical needs.',"02_High_Priestess.jpg"),
-	new Card('', Pentacles, false, 11, 'Apprentice. A message about money or health. A creative and hardworking kid. Trust in one\'s resources, playing one\'s cards well, beginning a career.',"02_High_Priestess.jpg"),
-	new Card('', Pentacles, false, 12, 'Journeyman. Travel on foot, or self-propelled. The materialistic knight, perhaps obsessive and isolationist.',"02_High_Priestess.jpg"),
-	new Card('', Pentacles, false, 13, 'A practical, active, organized woman. Perhaps over-focused on the material or unimaginative. The development of business plans.',"02_High_Priestess.jpg"),
-	new Card('', Pentacles, false, 14, 'The master of earth, body, and possessions. A loyal man, an organizer of large projects, the lead engineer. Self-reliance.',"02_High_Priestess.jpg"),
+	new Card('', Pentacles, false, 1, 'Matter. A new task; new projects; new goals. The essence of earth. North. Winter. Uriel.',".","02_High_Priestess.jpg"),
+	new Card('', Pentacles, false, 2, 'Balance of material tasks and jobs. The juggler.',".","02_High_Priestess.jpg"),
+	new Card('', Pentacles, false, 3, 'Craftsmanship. Construction. Hard work, with its results.',".","02_High_Priestess.jpg"),
+	new Card('', Pentacles, false, 4, 'The miser. A refusal to share. Fear.',".","02_High_Priestess.jpg"),
+	new Card('', Pentacles, false, 5, 'Exposure, vulnerability. Material loss. Poverty. Perhaps someone to share the hardships with.',".","02_High_Priestess.jpg"),
+	new Card('', Pentacles, false, 6, 'Generosity. Impulsiveness, altruism.',".","02_High_Priestess.jpg"),
+	new Card('', Pentacles, false, 7, 'Rest. Patiently waiting for work to come to fruition. Nothing to do but wait.',".","02_High_Priestess.jpg"),
+	new Card('', Pentacles, false, 8, 'Apprenticeship. Dedication. The training montage.',".","02_High_Priestess.jpg"),
+	new Card('', Pentacles, false, 9, 'Wealth. Physical luxury. Rewards for hard work. A lush vacation.',".","02_High_Priestess.jpg"),
+	new Card('', Pentacles, false, 10, 'Prosperity rooted in tradition. The fulfilment of physical needs.',".","02_High_Priestess.jpg"),
+	new Card('', Pentacles, false, 11, 'Apprentice. A message about money or health. A creative and hardworking kid. Trust in one\'s resources, playing one\'s cards well, beginning a career.',".","02_High_Priestess.jpg"),
+	new Card('', Pentacles, false, 12, 'Journeyman. Travel on foot, or self-propelled. The materialistic knight, perhaps obsessive and isolationist.',".","02_High_Priestess.jpg"),
+	new Card('', Pentacles, false, 13, 'A practical, active, organized woman. Perhaps over-focused on the material or unimaginative. The development of business plans.',".","02_High_Priestess.jpg"),
+	new Card('', Pentacles, false, 14, 'The master of earth, body, and possessions. A loyal man, an organizer of large projects, the lead engineer. Self-reliance.',".","02_High_Priestess.jpg"),
 ];
 
 var tarot = [].concat(majors).concat(cups).concat(wands).concat(swords).concat(pentacles);
