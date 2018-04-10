@@ -81,7 +81,7 @@ var majors = [
 	new Card('Temperance', null, true, 14, 'Alchemy: Moderation, the blending of elements. The balancing of energies.', 'Sagittarius',"14_Temperance.jpg"),
 	new Card('The Devil', null, true, 15, 'Passion: Enslavement, materialism, addiction, wild behavior. The extremes. Desires of the senses, sexuality. Pan.',".","15_Devil.jpg"),
 	new Card('The Tower', null, true, 16, 'War: the destruction of the establishment with a single flash of insight. Tearing down. A rude awakening. Secrets.',".","16_Tower.jpg"),
-	new Card('The Star', null, true, 17, 'Hope: Spiritual insight, healing, water to quench thirst.', 'Aquarius',".","17_Star.jpg"),
+	new Card('The Star', null, true, 17, 'Hope: Spiritual insight, healing, water to quench thirst.', 'Aquarius',"17_Star.jpg"),
 	new Card('The Moon', null, true, 18, 'Fantasy: Visions & dreams & unconscious knowledge. Water, night, inaction.', 'Pisces',"18_Moon.jpg"),
 	new Card('The Sun', null, true, 19, 'Truth: Glory, triumph, radiance, confidence in power. Fire, day, action.', 'Leo',"19_Sun.jpg"),
 	new Card('Judgement', null, true, 20, 'Conclusions: Decisions made, new directions embraced. Leave the dead past behind, and embrace rebirth.',".","20_Judgement.jpg"),
