@@ -62,7 +62,7 @@ function writingReply(child_permlink,pAuthor){
 	var content = '<table><tr><td> . ';
 	//content += cloudinary.image("00_Fool.jpg", {alt : "Test"})
 	console.log(cloudinary.image(a, {alt : "Test"}));
-	content += cloudinary.image(a, {alt : "Test"})
+	content += cloudinary.image(a, {alt : "Test"}, {width : 200})
 	content += '</td><td><p><strong>안녕하세요. 타로점 결과 입니다. 조만간 한글 버전도 나오니, 많이 사용해 주세요.</strong></p><hr><p>';
 	
 	//content += tarot.randomCard();
