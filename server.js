@@ -139,7 +139,7 @@ async function getFullAccountHistory(){
 				console.log(tx[1].op[0], tx[1].op[1].from, tx[1].op[1].amount)
 				let money = tx[1].op[1].amount.split(" ");
 				amount += parseInt(money[0],10);}
-		
+		}
 	
 		console.log("total amount from exchange", amount);
 	
@@ -149,7 +149,7 @@ async function getFullAccountHistory(){
 
 	} //end of for
 //} while(result.length != 0)
-}
+} //end of async function
 
 //did not return all images. This may depends on the folder
 //cloudinary.v2.api.resources(function(error, result){console.log(result)});
