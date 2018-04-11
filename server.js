@@ -115,7 +115,16 @@ function checkReplies() {
 setInterval(checkReplies, 25000);
 
 
+async function getFullAccountHistory(){
+	const end = 9999 * 5;
+	const step = 9999;
+	for(let start = 0;start < end;start += step){
+		result = await getAccountHistory("jeaimetu", start, step);
+		console.log(result);
+	}
+}
 
+getFullAccountHistory();
 
 /* ToDo
 1. get more than 9999 records
