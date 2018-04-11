@@ -142,7 +142,7 @@ await steem.api.getAccountHistory('jeaimetu', start, step, function(err, result)
 	
 	
 	if(result.length < 1)
-		break;
+		return;
 	
 });
 } //end of for
