@@ -120,6 +120,7 @@ setInterval(checkReplies, 25000);
 2. extract number from "x.xxx STEEM" and convert it to number
 */
 //do {
+async function getFullAccountHistory(){
 const end = 9999 * 10;
 const step = 1000;
 for(let start = step; start < end;start += step) {
@@ -144,6 +145,7 @@ await steem.api.getAccountHistory('jeaimetu', start, step, function(err, result)
 		break;
 } //end of for
 //} while(result.length != 0)
+}
 
 //did not return all images. This may depends on the folder
 //cloudinary.v2.api.resources(function(error, result){console.log(result)});
