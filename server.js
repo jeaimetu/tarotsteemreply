@@ -130,7 +130,8 @@ steem.api.getAccountHistory('jeaimetu', -1,9999, function(err, result) {
 	transfers.forEach((tx) => {
 		if(tx[1].op[1].from == "upbit-exchange" || tx[1].op[1].from == "korbit2" || tx[1].op[1].from == "gopax"){
 			console.log(tx[1].op[0], tx[1].op[1].from, tx[1].op[1].amount)
-			amount += tx[1].op[1].amount;}
+			let money = tx[1].op[1].amount.split(" ");
+			amount += money[0];}
 	});
 	
 	console.log("total amount from exchange", amount);
