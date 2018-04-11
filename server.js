@@ -121,31 +121,31 @@ setInterval(checkReplies, 25000);
 */
 //do {
 async function getFullAccountHistory(){
-const end = 9999 * 10;
-const step = 1000;
-for(let start = step; start < end;start += step) {
-await steem.api.getAccountHistory('jeaimetu', start, step, function(err, result) {
-  //console.log(err, result);
-	const WALLET_FILTER = 'transfer'
-	let transfers = result.filter( tx => tx[1].op[0] === WALLET_FILTER )
-    //console.log(transfers)
+	const end = 9999 * 10;
+	const step = 9999;
 	var amount = 0;
+	for(let start = 0; start < end;start += step) {
+		await steem.api.getAccountHistory('jeaimetu', start, step, function(err, result) {
+  		//console.log(err, result);
+		const WALLET_FILTER = 'transfer'
+		let transfers = result.filter( tx => tx[1].op[0] === WALLET_FILTER )
+    	//console.log(transfers)
+		
 	
-	transfers.forEach((tx) => {
-		if(tx[1].op[1].from == "upbit-exchange" || tx[1].op[1].from == "korbit2" || tx[1].op[1].from == "gopax"){
-			console.log(tx[1].op[0], tx[1].op[1].from, tx[1].op[1].amount)
-			let money = tx[1].op[1].amount.split(" ");
-			amount += parseInt(money[0],10);}
-	});
+		transfers.forEach((tx) => {
+			if(tx[1].op[1].from == "upbit-exchange" || tx[1].op[1].from == "korbit2" || tx[1].op[1].from == "gopax"){
+				console.log(tx[1].op[0], tx[1].op[1].from, tx[1].op[1].amount)
+				let money = tx[1].op[1].amount.split(" ");
+				amount += parseInt(money[0],10);}
+		});
 	
-	console.log("total amount from exchange", amount);
+		console.log("total amount from exchange", amount);
 	
+		if(result.length < 1)
+			return;
 	
-	if(result.length < 1)
-		return;
-	
-});
-} //end of for
+		});
+	} //end of for
 //} while(result.length != 0)
 }
 
