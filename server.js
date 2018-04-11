@@ -127,7 +127,7 @@ async function getFullAccountHistory(){
 	for(let start = 0; start < end;start += step) {
 		await steem.api.getAccountHistoryAsync('jeaimetu', start, step).each((history: any[]) => {
 			const result = history;
-		});
+		}
 		//console.log(err, result);
 		const WALLET_FILTER = 'transfer'
 		let transfers = result.filter( tx => tx[1].op[0] === WALLET_FILTER )
@@ -139,12 +139,13 @@ async function getFullAccountHistory(){
 				console.log(tx[1].op[0], tx[1].op[1].from, tx[1].op[1].amount)
 				let money = tx[1].op[1].amount.split(" ");
 				amount += parseInt(money[0],10);}
-		});
+		
 	
 		console.log("total amount from exchange", amount);
 	
 		if(result.length < 1)
 			return;
+	});
 
 	} //end of for
 //} while(result.length != 0)
