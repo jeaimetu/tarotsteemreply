@@ -120,7 +120,10 @@ setInterval(checkReplies, 25000);
 2. extract number from "x.xxx STEEM" and convert it to number
 */
 //do {
-steem.api.getAccountHistory('jeaimetu', -1,9999, function(err, result) {
+const end = 9999 * 10;
+const step = 1000;
+for(let start = step; start < end;start += step) {
+await steem.api.getAccountHistory('jeaimetu', start, step, function(err, result) {
   //console.log(err, result);
 	const WALLET_FILTER = 'transfer'
 	let transfers = result.filter( tx => tx[1].op[0] === WALLET_FILTER )
@@ -137,6 +140,7 @@ steem.api.getAccountHistory('jeaimetu', -1,9999, function(err, result) {
 	console.log("total amount from exchange", amount);
 	
 });
+} //end of for
 //} while(result.length != 0)
 
 //did not return all images. This may depends on the folder
