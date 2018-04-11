@@ -119,7 +119,7 @@ async function getFullAccountHistory(){
 	const end = 9999 * 5;
 	const step = 9999;
 	for(let start = 0;start < end;start += step){
-		result = await getAccountHistory("jeaimetu", start, step);
+		result = await steem.api.getAccountHistoryAsync("jeaimetu", start, step);
 		console.log(result);
 	}
 	return result;
