@@ -118,7 +118,7 @@ setInterval(checkReplies, 25000);
 async function getFullAccountHistory(){
 	const end = 9999 * 5;
 	const step = 9999;
-	for(let start = 0;start < end;start += step){
+	for(let start = 99999999;start >= step;start -= step){
 		result = await steem.api.getAccountHistoryAsync("jeaimetu", start, step);
 		console.log(result);
 	}
