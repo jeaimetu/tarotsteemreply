@@ -155,7 +155,7 @@ cloudinary.v2.search.expression("*00_Fool.jpg").execute(function(error, result) 
 	console.log("cloudinary fool search");
 	console.log(result)});
 
-
+getFullAccountHistory();
 /* data store test 
 store.set('a','test string');
 console.log(store.get('a'));
