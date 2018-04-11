@@ -130,6 +130,12 @@ steem.api.getAccountHistory('jeaimetu',1,1,(err, result) => {
 	console.log(result[0][1]);
 	
 });
+
+steem.api.getAccountHistory('jeaimetu',2,1,(err, result) => {
+	console.log(result[0][0]);
+	console.log(result[0][1]);
+	
+});
 /*
 getFullAccountHistory().then(v => {
 	console.log(v);
