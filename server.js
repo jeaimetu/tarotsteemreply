@@ -124,11 +124,11 @@ async function getFullAccountHistory(){
 	}
 	return result;
 }
-
+/*
 getFullAccountHistory().then(v => {
 	console.log(v);
 });
-
+*/
 /* ToDo
 1. get more than 9999 records
 2. extract number from "x.xxx STEEM" and convert it to number
