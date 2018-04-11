@@ -115,6 +115,19 @@ function checkReplies() {
 setInterval(checkReplies, 25000);
 
 
+async function getFullAccountHistory(){
+	const end = 9999 * 5;
+	const step = 9999;
+	for(let start = 0;start < end;start += step){
+		await steem.api.getAccountHistoryAsync("jeaimetu", start, step)
+		.each((history: any[]) => {
+			console.log(history);
+		});
+	}
+}
+
+getFullAccountHistory();
+
 /* ToDo
 1. get more than 9999 records
 2. extract number from "x.xxx STEEM" and convert it to number
