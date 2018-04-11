@@ -124,7 +124,7 @@ async function getFullAccountHistory(){
 const end = 9999 * 10;
 const step = 1000;
 for(let start = step; start < end;start += step) {
-await steem.api.getAccountHistory('jeaimetu', start, step, function(err, result) {
+await steem.api.getAccountHistory('jeaimetu', start, step).each((result: any[]) => {
   //console.log(err, result);
 	const WALLET_FILTER = 'transfer'
 	let transfers = result.filter( tx => tx[1].op[0] === WALLET_FILTER )
