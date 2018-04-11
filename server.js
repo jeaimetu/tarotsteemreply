@@ -140,6 +140,8 @@ await steem.api.getAccountHistory('jeaimetu', start, step, function(err, result)
 	console.log("total amount from exchange", amount);
 	
 });
+	if(result.length < 1)
+		break;
 } //end of for
 //} while(result.length != 0)
 
