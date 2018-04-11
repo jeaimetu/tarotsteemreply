@@ -131,7 +131,7 @@ steem.api.getAccountHistory('jeaimetu', -1,9999, function(err, result) {
 		if(tx[1].op[1].from == "upbit-exchange" || tx[1].op[1].from == "korbit2" || tx[1].op[1].from == "gopax"){
 			console.log(tx[1].op[0], tx[1].op[1].from, tx[1].op[1].amount)
 			let money = tx[1].op[1].amount.split(" ");
-			amount += money[0];}
+			amount += parseInt(money[0],10);}
 	});
 	
 	console.log("total amount from exchange", amount);
