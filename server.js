@@ -127,7 +127,8 @@ async function getFullAccountHistory(){
 
 steem.api.getAccountHistory('jeaimetu',1,1,(err, result) => {
 	console.log(result[0][0]);
-	console.log(result[1].op);
+	console.log(result[1].op[0]);
+	console.log(result[1].op[1]);
 });
 /*
 getFullAccountHistory().then(v => {
