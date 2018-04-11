@@ -129,24 +129,28 @@ steem.api.getAccountHistory('jeaimetu',1,1,(err, result) => {
 	console.log("1 1 test");
 	console.log(result[0][0]);
 	console.log(result[0][1]);	
+	console.log(result);
 });
 
 steem.api.getAccountHistory('jeaimetu',2,1,(err, result) => {
 	console.log("2 1 test");
 	console.log(result[0][0]);
 	console.log(result[0][1]);	
+	console.log(result);
 });
 
 steem.api.getAccountHistory('jeaimetu',3,1,(err, result) => {
 	console.log("3 1 test");
 	console.log(result[0][0]);
 	console.log(result[0][1]);	
+	console.log(result);
 });
 
 steem.api.getAccountHistory('jeaimetu',2,2,(err, result) => {
 	console.log("2 2 test");
 	console.log(result[0][0]);
 	console.log(result[0][1]);	
+	console.log(result);
 });
 /*
 getFullAccountHistory().then(v => {
