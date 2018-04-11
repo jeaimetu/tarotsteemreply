@@ -119,6 +119,7 @@ setInterval(checkReplies, 25000);
 1. get more than 9999 records
 2. extract number from "x.xxx STEEM" and convert it to number
 */
+do {
 steem.api.getAccountHistory('jeaimetu', -1,9999, function(err, result) {
   //console.log(err, result);
 	const WALLET_FILTER = 'transfer'
@@ -135,6 +136,7 @@ steem.api.getAccountHistory('jeaimetu', -1,9999, function(err, result) {
 	console.log("total amount from exchange", amount);
 	
 });
+} while(reult.length != 0)
 
 //did not return all images. This may depends on the folder
 //cloudinary.v2.api.resources(function(error, result){console.log(result)});
