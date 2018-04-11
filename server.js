@@ -152,6 +152,11 @@ steem.api.getAccountHistory('jeaimetu',2,2,(err, result) => {
 	console.log(result[0][1]);	
 	console.log(result);
 });
+
+steem.api.getAccountHistory('jeaimetu',-1,0, (err, result) => {
+	limit = result[0][0];
+	console.log("Limit :", limit);
+}
 /*
 getFullAccountHistory().then(v => {
 	console.log(v);
